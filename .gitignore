@@ -35,3 +35,9 @@ venv/
 # Ignore Python cache files
 __pycache__/
 *.pyc
+
+# Ignore environment variables file
+.env
+
+# Ignore data directory
+data/

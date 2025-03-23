@@ -11,12 +11,17 @@
         <header class="header">
             <h1>To-Do Task Manager</h1>
             <p>Manage your tasks efficiently</p>
+            <button id="theme-switcher">Switch Theme</button>
         </header>
         
         <section class="todo-app">
-            <div id="task-list">
-                <!-- Tasks will be loaded here dynamically -->
+            <div class="todo-input">
+                <input type="text" id="new-task" placeholder="Enter a new task">
+                <button id="add-task">Add Task</button>
             </div>
+            <ul id="task-list">
+                <!-- Tasks will be added here dynamically -->
+            </ul>
         </section>
     </div>
     
