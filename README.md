@@ -4,7 +4,7 @@ Personal webpage
 
 ## Description
 
-This is my personal webpage showcasing my projects, skills, and contact information.
+This is my personal webpage.
 
 ## Live Site
 
