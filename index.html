@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HonNoMushii - Personal Webpage</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
     <div class="container">
@@ -19,13 +19,40 @@
             <!-- Project One -->
             <div class="project-card">
                 <h2>To-Do list</h2>
-                <p>A simple task management widget using local storage. <a href="todo-task-manager.html">View</a></p>
+                <p>A simple task management widget using local storage. <a href="assets/todo-task-manager.html">View</a></p>
             </div>
         </section>
 
-        <section class="nasa-apod">
-            <h2>NASA Astronomy Picture of the Day</h2>
-            <div id="apod"></div>
+        <section class="github-widgets">
+            <h2>GitHub-Themed Widgets</h2>
+            <!-- GitHub Repo Stats Widget -->
+            <div class="github-stats">
+                <h3>GitHub Repo Stats</h3>
+                <input type="text" id="repo-name" placeholder="Enter repository name (owner/repo)">
+                <button id="fetch-repo-stats">Fetch Stats</button>
+                <div id="repo-stats"></div>
+            </div>
+            <!-- GitHub Profile Card -->
+            <div class="github-stats">
+                <h3>GitHub Profile Card</h3>
+                <input type="text" id="github-username" placeholder="Enter GitHub username">
+                <button id="fetch-profile-card">Fetch Profile</button>
+                <div id="profile-card"></div>
+            </div>
+            <!-- GitHub Star Counter -->
+            <div class="github-stats">
+                <h3>GitHub Star Counter</h3>
+                <input type="text" id="star-username" placeholder="Enter GitHub username">
+                <button id="fetch-star-count">Fetch Star Count</button>
+                <div id="star-count"></div>
+            </div>
+            <!-- GitHub Trending Repos Widget -->
+            <div class="github-stats">
+                <h3>GitHub Trending Repos</h3>
+                <button id="fetch-trending-repos">Fetch Trending Repos</button>
+                <div id="trending-repos"></div>
+            </div>
+            <!-- Additional widgets can be added here -->
         </section>
 
         <section class="github-stats">
@@ -37,11 +64,11 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="social-icons">
-            <a href="https://github.com/HonNoMushii" target="_blank"><img src="github-icon.png" alt="GitHub"></a>
-            <a href="mailto:youremail@example.com"><img src="email-icon.png" alt="Email"></a>
+            <a href="https://github.com/HonNoMushii" target="_blank"><img src="assets/images/github-icon.png" alt="GitHub"></a>
+            <a href="mailto:youremail@example.com"><img src="assets/images/email-icon.png" alt="Email"></a>
         </div>
         <p>&copy; 2023 HonNoMushii. All rights reserved.</p>
     </footer>
-    <script src="scripts.js"></script>
+    <script src="assets/js/scripts.js"></script>
 </body>
 </html>
