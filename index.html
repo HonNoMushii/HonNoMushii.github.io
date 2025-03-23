@@ -1,40 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HonNoMushii</title>
-    <link rel="stylesheet" href="assets/css/styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HonNoMushii</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
 </head>
-<body>
+<body class="light-mode">
+  <header class="header">
     <div class="container">
-        <!-- Header -->
-        <header class="header">
-            <h1>Welcome to my personal Webpage</h1>
-            <section class="github-stats">
-                <h2>GitHub Repository Statistics</h2>
-                <div id="repo-stats"></div>
-            </section>
-        </header>
-        
-        <section class="projects">
-            <!-- Project One -->
-            <div class="project-card">
-                <h2>To-Do list</h2>
-                <p>A simple task management widget using local storage. <a href="assets/todo-task-manager.html">View</a></p>
-            </div>
-        </section>
+      <h1>HonNoMushii</h1>
+      <nav class="navbar">
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#task-manager">Task Manager</a></li>
+        </ul>
+      </nav>
+      <button id="theme-switcher" class="theme-switcher">Switch Theme</button>
     </div>
-    
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="social-icons">
-            <a href="https://github.com/HonNoMushii" target="_blank"><img src="assets/images/github-icon.png" alt="GitHub"></a>
-            <a href="mailto:youremail@example.com"><img src="assets/images/email-icon.png" alt="Email"></a>
-        </div>
-        <p>&copy; 2023 <a href="LICENSE" target="_blank">HonNoMushii. All rights reserved.</a></p>
-        <button id="theme-switcher" class="theme-switcher" style="font-size: 0.8em;">Switch Theme</button>
-    </footer>
-    <script src="assets/js/scripts.js"></script>
+  </header>
+
+  <hr class="section-divider">
+
+  <section id="about" class="about">
+    <div class="container">
+      <h2>About Me</h2>
+      <p>Hello, I’m HonNoMushii, an architecture student from the Netherlands. Although I’m not a professional developer, I recently discovered my passion for programming and find its creative and challenging aspects truly exciting. Programming has quickly become a new hobby, and I'm always eager to learn and improve my skills.</p>
+      <p>This is my personal GitHub page. While I haven't added any projects or experiments yet, I'm excited to start sharing code snippets and document my journey into programming as I grow and learn.</p>
+      <p>Outside of my studies and coding, I love expressing my creativity—whether it’s painting, building with Lego, or enjoying the great outdoors. These diverse interests bring balance to my life and inspire me to explore new horizons.</p>
+      <p>Welcome to my website, and thanks for stopping by!</p>
+    </div>
+  </section>
+
+  <hr class="section-divider">
+
+  <section id="task-manager" class="task-manager">
+    <div class="container">
+      <h2>Local Task Manager</h2>
+      <!-- To-Do Task Manager Section -->
+      <div class="todo">
+        <h3>To-Do List</h3>
+        <input type="text" id="new-task" placeholder="Enter a new task">
+        <button id="add-task">Add Task</button>
+        <ul id="task-list"></ul>
+      </div>
+      <!-- GitHub Repo Stats Section -->
+      <div class="github-stats">
+        <h3>GitHub Repositories</h3>
+        <div id="repo-stats"></div>
+      </div>
+      <p><a href="assets/todo-task-manager.html">View Project Details</a></p>
+    </div>
+  </section>
+
+  <hr class="section-divider">
+
+  <footer class="footer">
+    <div class="container">
+      <div class="social-icons">
+        <a href="https://github.com/HonNoMushii" target="_blank">GitHub</a>
+        <a href="mailto:youremail@example.com">Email</a>
+      </div>
+      <p>&copy; 2023 HonNoMushii. <a href="#" id="show-license">All rights reserved.</a></p>
+    </div>
+  </footer>
+
+  <!-- License Modal -->
+  <div id="license-modal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <pre id="license-text"></pre>
+    </div>
+  </div>
+
+  <script src="assets/js/scripts.js"></script>
 </body>
 </html>

@@ -1,36 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>To-Do Task Manager</title>
-    <link rel="stylesheet" href="css/styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To-Do List Project</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
 </head>
-<body>
-    <div class="navbar">
-        <a href="../index.html">Home</a>
-    </div>
+<body class="light-mode">
+  <header class="header">
     <div class="container">
-        <header class="header">
-            <h1>To-Do Task Manager</h1>
-            <p>Manage your tasks efficiently</p>
-        </header>
-        
-        <section class="todo-app">
-            <div class="todo-input">
-                <input type="text" id="new-task" placeholder="Enter a new task">
-                <button id="add-task">Add Task</button>
-            </div>
-            <ul id="task-list">
-                <!-- Tasks will be added here dynamically -->
-            </ul>
-        </section>
+      <h1>To-Do List Project</h1>
+      <button id="theme-switcher" class="theme-switcher">Switch Theme</button>
     </div>
-    
-    <footer class="footer">
-        <p>&copy; 2023 <a href="../LICENSE" target="_blank">HonNoMushii. All rights reserved.</a></p>
-        <button id="theme-switcher" class="theme-switcher">Switch Theme</button>
-    </footer>
-    <script src="js/scripts.js"></script>
+  </header>
+  <main>
+    <div class="container">
+      <p>
+        Manage your tasks with the interface below. Add new tasks, edit existing ones, mark tasks as completed, or delete them. Your tasks are saved in your browser's local storage.
+      </p>
+      <div class="todo">
+        <input type="text" id="new-task" placeholder="Enter a new task">
+        <button id="add-task">Add Task</button>
+        <ul id="task-list"></ul>
+      </div>
+      <p><a href="../index.html">Back to Home</a></p>
+    </div>
+  </main>
+  <script src="assets/js/scripts.js"></script>
 </body>
 </html>

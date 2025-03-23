@@ -80,7 +80,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Theme switcher functionality
     const themeSwitcher = document.getElementById('theme-switcher');
-    const currentTheme = localStorage.getItem('theme') || 'dark-mode';
+    const currentTheme = localStorage.getItem('theme') || 'light-mode';
     document.body.classList.add(currentTheme);
 
     themeSwitcher.addEventListener('click', () => {
@@ -119,4 +119,30 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     fetchGitHubStats(); // Fetch data on page load
+
+    // Modal functionality for License
+    const modal = document.getElementById('license-modal');
+    const showLicenseLink = document.getElementById('show-license');
+    const closeModal = document.getElementsByClassName('close')[0];
+    const licenseText = document.getElementById('license-text');
+
+    showLicenseLink.addEventListener('click', (event) => {
+        event.preventDefault();
+        fetch('LICENSE')
+            .then(response => response.text())
+            .then(text => {
+                licenseText.textContent = text;
+                modal.style.display = 'block';
+            });
+    });
+
+    closeModal.addEventListener('click', () => {
+        modal.style.display = 'none';
+    });
+
+    window.addEventListener('click', (event) => {
+        if (event.target == modal) {
+            modal.style.display = 'none';
+        }
+    });
 });
