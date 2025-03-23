@@ -11,8 +11,11 @@
         <!-- Header -->
         <header class="header">
             <h1>Welcome to My GitHub</h1>
-            <p>A professional portfolio of my work</p>
             <button id="theme-switcher">Switch Theme</button>
+            <section class="github-stats">
+                <h2>GitHub Repository Statistics</h2>
+                <div id="repo-stats"></div>
+            </section>
         </header>
         
         <section class="projects">
@@ -29,35 +32,9 @@
             <div class="github-stats">
                 <h3>GitHub Repo Stats</h3>
                 <input type="text" id="repo-name" placeholder="Enter repository name (owner/repo)">
-                <button id="fetch-repo-stats">Fetch Stats</button>
                 <div id="repo-stats"></div>
             </div>
-            <!-- GitHub Profile Card -->
-            <div class="github-stats">
-                <h3>GitHub Profile Card</h3>
-                <input type="text" id="github-username" placeholder="Enter GitHub username">
-                <button id="fetch-profile-card">Fetch Profile</button>
-                <div id="profile-card"></div>
-            </div>
-            <!-- GitHub Star Counter -->
-            <div class="github-stats">
-                <h3>GitHub Star Counter</h3>
-                <input type="text" id="star-username" placeholder="Enter GitHub username">
-                <button id="fetch-star-count">Fetch Star Count</button>
-                <div id="star-count"></div>
-            </div>
-            <!-- GitHub Trending Repos Widget -->
-            <div class="github-stats">
-                <h3>GitHub Trending Repos</h3>
-                <button id="fetch-trending-repos">Fetch Trending Repos</button>
-                <div id="trending-repos"></div>
-            </div>
             <!-- Additional widgets can be added here -->
-        </section>
-
-        <section class="github-stats">
-            <h2>GitHub Repository Statistics</h2>
-            <div id="repo-stats"></div>
         </section>
     </div>
     
