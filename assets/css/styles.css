@@ -4,7 +4,7 @@
 }
 
 body {
-    background: url('https://source.unsplash.com/1600x900/?galaxy,stars') no-repeat center center fixed;
+    background: url('assets/images/galaxy-stars.jpg') no-repeat center center fixed;
     background-size: cover;
     animation: stars 100s linear infinite;
     color: white;
@@ -16,20 +16,23 @@ body {
 }
 
 body.light-mode {
-    background: url('https://source.unsplash.com/1600x900/?daylight,sky') no-repeat center center fixed;
+    background: url('assets/images/daylight-sky.jpg') no-repeat center center fixed;
     background-size: cover;
     color: black;
 }
 
 body.dark-mode {
-    
-    background: url('https://source.unsplash.com/1600x900/?galaxy,stars') no-repeat center center fixed;
+    background: url('assets/images/galaxy-stars.jpg') no-repeat center center fixed;
     background-size: cover;
     color: white;
 }
 
 .container {
     flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .header, .footer, .project-card {
@@ -37,12 +40,16 @@ body.dark-mode {
     padding: 20px;
     border-radius: 10px;
     margin: 20px 0;
-    color: white; /* Ensure text is readable */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 
 body.light-mode .header, body.light-mode .footer, body.light-mode .project-card {
     background: rgba(255, 255, 255, 0.7);
-    color: black; /* Ensure text is readable */
+    color: black;
 }
 
 body.dark-mode .header, body.dark-mode .footer, body.dark-mode .project-card, body.dark-mode .todo-widget, body.dark-mode .portfolio-item {
@@ -53,9 +60,29 @@ body.dark-mode .header, body.dark-mode .footer, body.dark-mode .project-card, bo
     margin: 0;
 }
 
+.header {
+    padding-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
 .footer {
     text-align: center;
     font-size: 0.8em;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px 0;
+    color: white;
+    position: relative;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
 }
 
 .social-icons img {
@@ -68,12 +95,15 @@ body.dark-mode .header, body.dark-mode .footer, body.dark-mode .project-card, bo
     padding: 20px;
     border-radius: 10px;
     margin: 20px 0;
-    color: white; /* Ensure text is readable */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 body.light-mode .todo-widget {
     background: rgba(255, 255, 255, 0.7);
-    color: black; /* Ensure text is readable */
+    color: black;
 }
 
 .todo-widget h3 {
@@ -97,13 +127,16 @@ body.light-mode .todo-widget {
 }
 
 button#theme-switcher {
-    margin-top: 10px;
-    padding: 10px;
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    padding: 5px 10px;
     border: none;
     border-radius: 5px;
     background-color: #4CAF50;
     color: white;
     cursor: pointer;
+    font-size: 0.8em;
 }
 
 .todo-widget ul {
@@ -116,6 +149,10 @@ button#theme-switcher {
     padding: 10px;
     border-radius: 5px;
     margin: 5px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
 }
 
 .portfolio-item {
@@ -123,12 +160,15 @@ button#theme-switcher {
     padding: 15px;
     border-radius: 10px;
     margin: 10px 0;
-    color: white; /* Ensure text is readable */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 body.light-mode .portfolio-item {
     background: rgba(255, 255, 255, 0.7);
-    color: black; /* Ensure text is readable */
+    color: black;
 }
 
 .portfolio-item h3 {
@@ -170,12 +210,16 @@ body.light-mode .portfolio-item {
     padding: 20px;
     border-radius: 10px;
     margin: 20px 0;
-    color: white; /* Ensure text is readable */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 
 body.light-mode .github-stats {
     background: rgba(255, 255, 255, 0.7);
-    color: black; /* Ensure text is readable */
+    color: black;
 }
 
 .github-stats h2 {
@@ -192,4 +236,62 @@ body.light-mode .github-stats {
     padding: 10px;
     border-radius: 5px;
     margin: 5px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.projects {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.project-card {
+    flex: 1;
+    margin: 10px;
+}
+
+.todo-app {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.todo-input {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.todo-input input {
+    flex: 1;
+    margin-right: 10px;
+}
+
+.todo-input button {
+    flex: 0;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+    text-align: center;
+    z-index: 1000;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 15px;
+}
+
+.navbar a:hover {
+    text-decoration: underline;
 }
