@@ -96,7 +96,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     async function fetchGitHubStats() {
         try {
-            const response = await fetch('/api/github-stats');
+            const response = await fetch(`https://api.github.com/users/${githubUsername}/repos`);
             if (!response.ok) throw new Error("GitHub API request failed.");
 
             const repos = await response.json();
