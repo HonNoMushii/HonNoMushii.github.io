@@ -16,11 +16,5 @@ def index():
 def serve_file(filename):
     return send_from_directory('.', filename)
 
-@app.route('/api/nasa-apod')
-def nasa_apod():
-    api_key = os.getenv('NASA_API_KEY')
-    response = requests.get(f'https://api.nasa.gov/planetary/apod?api_key={api_key}')
-    return jsonify(response.json())
-
 if __name__ == '__main__':
     app.run(debug=True)
