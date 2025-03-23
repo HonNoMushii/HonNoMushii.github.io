@@ -22,6 +22,7 @@ body.light-mode {
 }
 
 body.dark-mode {
+    
     background: url('https://source.unsplash.com/1600x900/?galaxy,stars') no-repeat center center fixed;
     background-size: cover;
     color: white;
